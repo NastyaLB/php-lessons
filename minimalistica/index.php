@@ -3,7 +3,7 @@
 <?
     
 // установка временной зоны Москва
-date_default_timezone_set('Europe/Moscow');
+date_default_timezone_set('Europe/Samara');
 // указание на путь к файлу, у которого будет отображаться дата
 $filename = 'templates/general.php';
 // переменная для года создания файла, который будет отображаться на странице
@@ -21,6 +21,7 @@ if (date('Y', $now)>1970) { $posted = 'posted '.$number=(date('Y', $now)-1970).'
         ['id'=>'4','name'=>'general','logo'=>'minimalistica','link'=>'index.php?page=general'],        
     ];
     $page = $_GET['page'];
+    $Year=date('Y');
 ?>
 <head>
     <meta http-equiv="content-type" content="text/html;charset=utf-8" />
@@ -51,7 +52,7 @@ if (date('Y', $now)>1970) { $posted = 'posted '.$number=(date('Y', $now)-1970).'
 ?>
        
         <div id="footer">
-            <p>Copyright &copy; <em>minimalistica</em> &middot; Design: Luka Cvrk, <a href="http://www.solucija.com/" title="Free CSS Templates">Solucija</a></p>
+            <p>Copyright &copy; <? echo $Year; ?> <em>minimalistica</em> &middot; Design: Luka Cvrk, <a href="http://www.solucija.com/" title="Free CSS Templates">Solucija</a></p>
         </div>
     </div>
 </body>
