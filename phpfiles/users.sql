@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3307
--- Время создания: Мар 13 2019 г., 19:04
+-- Время создания: Мар 22 2019 г., 11:32
 -- Версия сервера: 5.6.41
 -- Версия PHP: 5.6.38
 
@@ -25,33 +25,44 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `shop`
+-- Структура таблицы `users`
 --
 
-CREATE TABLE `shop` (
+CREATE TABLE `users` (
   `id` int(11) NOT NULL,
-  `name` varchar(11) NOT NULL,
-  `size` int(11) NOT NULL,
-  `place` text NOT NULL,
-  `click` int(11) NOT NULL
+  `login` varchar(128) NOT NULL,
+  `pass` varchar(128) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Дамп данных таблицы `shop`
+-- Дамп данных таблицы `users`
 --
 
-INSERT INTO `shop` (`id`, `name`, `size`, `place`, `click`) VALUES
-(0, 'sideProfile', 14545, 'files/fImage/sideProfile.png', 0);
+INSERT INTO `users` (`id`, `login`, `pass`) VALUES
+(1, 'Лиса', 'lisalisa'),
+(2, 'Пёсик', 'вщпвщп'),
+(6, 'Лошадка', '854691'),
+(8, 'Вепрь', 'Dtghm');
 
 --
 -- Индексы сохранённых таблиц
 --
 
 --
--- Индексы таблицы `shop`
+-- Индексы таблицы `users`
 --
-ALTER TABLE `shop`
+ALTER TABLE `users`
   ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT для сохранённых таблиц
+--
+
+--
+-- AUTO_INCREMENT для таблицы `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
