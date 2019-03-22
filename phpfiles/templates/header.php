@@ -1,9 +1,13 @@
+<?
+    if($_SESSION[login]) $prof = '?profile='.$_SESSION[login];
+    else $prof = '?profile';
+?>
 <div class="container">
 <div class="header">
         <div class="logo"><a href="index.php">f<span class="up">i</span> les|pload</a></div> 
         <ul>
-            <li><a href="index.php">home</a></li>
-            <li><a href="index.php">gallery</a>
+            <li><a href="index.php">главная</a></li>
+            <li><a href="index.php">каталог</a>
             <ul>
                <?
                 $res=mysqli_query($connect,"SELECT * FROM goods");
@@ -15,7 +19,7 @@
                 ?>
             </ul>
             </li>
-            <li><a href="?item=admin">admin</a></li>
+            <li><a href="<?echo $prof;?>">профиль</a></li>
         </ul>
         <div class="st"></div>
 </div>

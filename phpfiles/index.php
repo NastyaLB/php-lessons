@@ -1,3 +1,4 @@
+<?session_start()?>
 <script src="jquery.js"></script>
 <script>
     function math_f(id2,id3) {
@@ -53,21 +54,25 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <?  
-    
-    include 'config/config.php';
+<?include 'config/config.php';
     
     $page = $_GET['item']; 
+    $pUser = $_GET['profile']; 
     
-    include('templates/header.php');  
-    
-    echo '<div class="contain"><div class="main">';
-    
-    include('templates/gallery.php'); 
+    include('templates/header.php'); 
+     
+    if(isset($pUser)!='profile')  {
+        echo '<div class="contain"><div class="main">';
+        include('templates/gallery.php');}
+    else {
+        echo '<div class="contain"><div style="width:100%; margin-right:10px;">';
+        include ('templates/basket.php');  
+    }
+      
     
     echo '</div>';    
     if(!isset($page))   
-        include('templates/form.php'); 
+        include('templates/user.php'); 
     elseif($page=='admin') include('admin.php'); 
     echo '</div>';
     include('templates/footer.php');
