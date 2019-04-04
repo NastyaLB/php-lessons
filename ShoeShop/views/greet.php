@@ -1,0 +1,3 @@
+<?
+buildGreet($page,$pUser);
+?>
