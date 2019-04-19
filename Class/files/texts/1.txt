@@ -1,0 +1,19 @@
+﻿№1-2-3<br>придумать класс&&
+class Item {$$
+private $content;$$
+private $Dend;$$
+&nbsp;$$
+function __construct($content) {$$
+echo $this->getStart().$content.$this->getEnd();$$
+}$$
+&nbsp;$$
+function getStart() {$$
+return $this->Dstart='<&nbsp;div class="item">';$$
+}$$
+&nbsp;$$
+function getEnd() {$$
+return $this->Dend='<&nbsp;/div>';$$
+}$$
+}  &&
+Класс для статьи: &&
+выводит блок с текстом статьи из массива статей

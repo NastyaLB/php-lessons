@@ -1,0 +1,16 @@
+﻿№4<br>придумать подкласс&&
+class Item {$$
+private $content;$$
+private $Dend;$$
+&nbsp;$$
+function getStart() {$$
+return $this->Dstart='<&nbsp;div class="item itBlossom">';$$
+}$$
+&nbsp;$$
+function getEnd() {$$
+return $this->Dend='<&nbsp;div class="blossom"><&nbsp;img src="files/blossom.png" alt=""><&nbsp;/div><&nbsp;/div>';$$
+}$$
+}  &&
+Класс для статьи с маркером цветочка: &&
+выводит блок с текстом статьи из массива статей, с цветочком в верхнем правом углу&&
+4
