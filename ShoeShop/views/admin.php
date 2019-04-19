@@ -1,3 +1,0 @@
-<?
-correctOrder($connect);
-?>
