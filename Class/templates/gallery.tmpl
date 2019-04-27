@@ -1,0 +1,15 @@
+<div class="wide"><h2>Галерея</h2></div>
+
+{% for level1,level2,level3 in gallery %}    
+    {% for level3 in level2 %}
+    {% if loop.index == 1 %}
+    <div class="item"><a href="{{level3}}"><img src=
+    {% elseif loop.index == 2 %}
+    "files/thumb/{{level3}}" alt=""></a><div class="quote"><a href=
+    {% elseif loop.index == 3 %}
+    "{{level3}}"
+    {% elseif loop.index == 4 %}
+    >{{level3}}</a></div></div>
+    {% endif %}
+{% endfor %}
+{% endfor %}
