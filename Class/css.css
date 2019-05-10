@@ -64,13 +64,16 @@ ul {
 .header > ul > li > ul > li {
   background-color: #d4c6ef;
 }
-.content {
-  height: 100%;
-}
 .main {
+  width: 100%;
+}
+.mainGallery {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+}
+.hideGallery {
+  display: none;
 }
 .item {
   margin-top: 5px;
@@ -78,7 +81,6 @@ ul {
   height: 162px;
   padding: 5px;
   position: relative;
-  /*padding-bottom:30px;*/
 }
 .item > a {
   margin: 0;
@@ -111,12 +113,31 @@ ul {
   margin: 10px 0 0;
   padding: 5px;
 }
-.wide > img {
-  width: 100%;
-}
 .clearfooter {
   width: 870px;
   height: 30px;
+}
+@keyframes spinner-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.spinner {
+  height: 30px;
+  text-align: center;
+  position: relative;
+  animation: spinner-rotate 0.9s linear infinite;
+}
+.spinnerblock {
+  width: 100%;
+  display: block;
+  text-align: center;
 }
 .header {
   height: 30px;
