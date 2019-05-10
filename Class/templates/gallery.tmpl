@@ -1,0 +1,42 @@
+<div class="wide"><h2>Галерея</h2></div>
+<div class="mainGallery">
+{% for level1,level2,level3 in gallery|slice(0,25) %}   
+    {% for level3 in level2 %}
+        {% if loop.index == 1 %}
+            <div class="item"><a href="{{level3}}"><img src=
+        {% elseif loop.index == 2 %}
+            "files/thumb/{{level3}}"></a><div class="quote"><a href=
+        {% elseif loop.index == 3 %}
+            "{{level3}}"
+        {% elseif loop.index == 4 %}
+            >{{level3}}</a></div></div>
+        {% endif %}  
+    {% endfor %}
+{% endfor %}
+</div>
+
+{% set caunt = 25 %}
+{% set cauntGal = gallery|length-5 %}
+
+{% for caunt in caunt..cauntGal if caunt%25 == 0 %}
+
+<div class="hideGallery">
+
+    {% for level1,level2,level3 in gallery|slice(caunt,25) %}
+        {% for level3 in level2 %}
+        {% if loop.index == 1 %}
+        <div class="item"><a href="{{level3}}"><img src=
+        {% elseif loop.index == 2 %}
+        "files/thumb/{{level3}}"></a><div class="quote"><a href=
+        {% elseif loop.index == 3 %}
+        "{{level3}}"
+        {% elseif loop.index == 4 %}
+        >{{level3}}</a></div></div>
+        {% endif %}  
+        {% endfor %}
+    {% endfor %}
+    
+</div>
+{% endfor %}
+
+<div class="wide"><a href="#" class="spinnerblock"><img src="files/spinner.svg" class="spinner" alt="Ещё"></a></div>
