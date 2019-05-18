@@ -1,0 +1,70 @@
+body
+{
+	font-family: Georgia;
+	font-size: 12px;
+    max-width: 1100px;
+    min-width: 202px;
+	margin: 0 auto;
+}
+
+a
+{
+	color: #00f;
+}
+
+a:hover
+{
+	color: #f00;
+}
+
+table {    border-spacing: 0;margin: 0 0 5px;}
+table td {    border: 1px solid #999; font-size: 12px;}
+
+#logA{    text-decoration: none;color: #000;}
+
+textarea
+{
+	width: 100%;
+	height: 300px;
+}
+
+#header
+{
+	padding: 10px;
+	background: #eee;
+}
+
+#menu
+{
+	padding: 10px;
+	background: #ccc;
+}
+
+#content
+{
+	margin: 5px;
+	padding: 10px;
+	border: 1px dotted #999;
+    height: auto;
+}
+
+.textwide {    width: 100%;}
+
+.imgright {    width: 100%;display: flex;justify-content:flex-start;}
+
+.gallery {   margin: 5px; max-width: 1090px;display: flex;justify-content: space-between;flex-wrap: wrap;}
+.item {    width: 200px; outline: 1px dotted #999;position: relative}
+.item img {    width: 100%;vertical-align: bottom;}
+.itemName {    position: absolute; bottom: 0; font-size: 14px; text-align: center; display: block; width: 100%; text-decoration: none;background: rgba(100, 100, 115,0.5);color: #fff;padding: 5px 0;}
+.itemName:hover {    font-weight: bold; color: #fff;padding: 15px 0;}
+.item small,.item .characta,.item form {    display: none;}
+.item:hover small,.item:hover form {    display: inline-block;}
+.item:hover .characta {    display: block;font-size: 12px;padding: 5px 0;}
+.item:hover small,.item:hover .characta {    font-weight: normal;}
+.item:hover form {    margin: 0;}
+
+#footer
+{
+	padding: 10px;
+	background: #ccc;
+}
