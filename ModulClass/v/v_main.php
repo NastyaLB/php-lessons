@@ -26,10 +26,12 @@ include('config.php');
     </div>
 
     <div id="menu">
-        <a href="index.php">Читать текст</a> |
-        <a href="index.php?c=page&act=edit">Редактировать текст</a>
-        <span style="float:right"><a href="<?=$userlink['link']?>">
-                <?=$userlink[linktext]?></a></span>
+        <div>
+            <a href="index.php">Читать текст</a><span> | </span> 
+            <a href="index.php?c=page&act=edit">Редактировать текст</a>
+        </div>
+        <div class="menu1"><a href="<?=$userlink['link']?>">
+                <?=$userlink[linktext]?></a></div>
     </div>
 
     <div id="content">
@@ -41,7 +43,7 @@ include('config.php');
     </div>
 
     <div id="footer">
-        Все права защищены. Адрес. Телефон. ||| Логин:Some. Пароль:SomeSome
+        Все права защищены. Адрес. Телефон. ||| Логин:Some. Пароль:SomeSome 
     </div>
 </body>
 
