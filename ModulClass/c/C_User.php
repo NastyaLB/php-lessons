@@ -18,7 +18,8 @@ class C_User extends C_Base
 		{
             $_SESSION[username]=null;
             $_SESSION[password]=null;
-            $_SESSION[$arres]=null;
+            $_SESSION[usArr]=null;
+            $_SESSION[buyItem]=null;
             session_destroy();
 			header('location: index.php');
 			exit();
