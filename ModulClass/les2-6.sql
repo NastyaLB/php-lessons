@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Май 18 2019 г., 10:37
+-- Время создания: Май 22 2019 г., 16:14
 -- Версия сервера: 5.6.41
 -- Версия PHP: 5.6.38
 
@@ -32,6 +32,7 @@ CREATE TABLE `basket` (
   `id_basket` int(11) NOT NULL,
   `id_user` int(11) NOT NULL,
   `id_good` int(11) NOT NULL,
+  `number` int(11) NOT NULL,
   `price` double NOT NULL,
   `is_in_order` tinyint(4) NOT NULL,
   `id_order` int(11) NOT NULL
@@ -41,11 +42,12 @@ CREATE TABLE `basket` (
 -- Дамп данных таблицы `basket`
 --
 
-INSERT INTO `basket` (`id_basket`, `id_user`, `id_good`, `price`, `is_in_order`, `id_order`) VALUES
-(1, 1, 4, 300, 1, 1),
-(2, 1, 2, 350, 1, 1),
-(3, 1, 1, 400, 1, 2),
-(4, 1, 3, 450, 1, 2);
+INSERT INTO `basket` (`id_basket`, `id_user`, `id_good`, `number`, `price`, `is_in_order`, `id_order`) VALUES
+(1, 1, 4, 1, 300, 1, 1),
+(2, 1, 2, 1, 350, 1, 1),
+(3, 1, 1, 1, 400, 1, 2),
+(4, 1, 3, 1, 450, 1, 2),
+(5, 1, 5, 1, 500, 1, 3);
 
 -- --------------------------------------------------------
 
@@ -113,7 +115,8 @@ CREATE TABLE `orders` (
 
 INSERT INTO `orders` (`id_order`, `id_user`, `amount`, `datetime_create`, `id_orederstatus`) VALUES
 (1, 1, 750, '0000-00-00 00:00:00', 1),
-(2, 1, 950, '0000-00-00 00:00:00', 1);
+(2, 1, 950, '0000-00-00 00:00:00', 1),
+(3, 1, 500, '0000-00-00 00:00:00', 1);
 
 -- --------------------------------------------------------
 
@@ -268,7 +271,7 @@ ALTER TABLE `user_role`
 -- AUTO_INCREMENT для таблицы `basket`
 --
 ALTER TABLE `basket`
-  MODIFY `id_basket` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_basket` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT для таблицы `categories`
@@ -286,7 +289,7 @@ ALTER TABLE `goods`
 -- AUTO_INCREMENT для таблицы `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id_order` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_order` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT для таблицы `order_status`
