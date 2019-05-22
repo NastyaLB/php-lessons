@@ -17,9 +17,6 @@ a:hover
 	color: #f00;
 }
 
-table {    border-spacing: 0;margin: 0 0 5px;}
-table td {    border: 1px solid #999; font-size: 12px;}
-
 #logA{    text-decoration: none;color: #000;}
 
 textarea
@@ -38,7 +35,13 @@ textarea
 {
 	padding: 10px;
 	background: #ccc;
+    display: flex;
+    justify-content: space-between;
 }
+.menu1 a {    display: flex; justify-content: space-between;}
+.basketCount {    display: block; line-height: 10px;border-radius: 5px;background-color: red;padding: 0 5px;text-decoration: none;color: #fff;vertical-align: sub;}
+.basketCount:hover {    background-color: darkred;color: #fff;}
+.basketCount small {    position: relative; bottom:-2px;}
 
 #content
 {
@@ -55,13 +58,29 @@ textarea
 .gallery {   margin: 5px; max-width: 1090px;display: flex;justify-content: space-between;flex-wrap: wrap;}
 .item {    width: 200px; outline: 1px dotted #999;position: relative}
 .item img {    width: 100%;vertical-align: bottom;}
-.itemName {    position: absolute; bottom: 0; font-size: 14px; text-align: center; display: block; width: 100%; text-decoration: none;background: rgba(100, 100, 115,0.5);color: #fff;padding: 5px 0;}
-.itemName:hover {    font-weight: bold; color: #fff;padding: 15px 0;}
+.itemName {    position: absolute; bottom: 0; font-size: 14px; font-weight: bold; text-align: center; display: block; width: 190px; text-decoration: none;background: rgba(100, 100, 115,0.5);color: #fff;padding: 5px;}
+.itemName:hover {    color: #fff;}
 .item small,.item .characta,.item form {    display: none;}
 .item:hover small,.item:hover form {    display: inline-block;}
 .item:hover .characta {    display: block;font-size: 12px;padding: 5px 0;}
 .item:hover small,.item:hover .characta {    font-weight: normal;}
 .item:hover form {    margin: 0;}
+
+.notClient {    width:180px; padding: 3px 5px; text-align: center;background-color: #ccc;}
+.notClient p {    margin: 0 auto;color: red;display: block;z-index: 3;}
+
+.orders {    width: 100%; border-spacing: 0; margin: 0 0 5px; font-size: 12px;}
+.orders tr:first-child td {    background-color: #ccc;border-top:1px solid #999;}
+.orders td:first-child {    border-left:1px solid #999;width: 25%;}
+.orders td:nth-child(2), {    width: 12%;}
+.orders td:nth-child(2), {    width: 9%;}
+.orders td:last-child {    border-right:1px solid #999;}
+.orders td {    border-bottom:1px solid #999;}
+.totalSum {    background-color: #ccc;text-align: right;}
+
+.basket tr:first-child td,.basket tr:last-child td, {    background-color: #b4b2b7;}
+
+.formout input[type="submit"] {    }
 
 #footer
 {
