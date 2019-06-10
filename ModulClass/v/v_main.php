@@ -17,6 +17,9 @@ include('config.php');
     </title>
     <meta content="text/html; charset=Windows-1251" http-equiv="content-type">
     <link rel="stylesheet" type="text/css" media="screen" href="v/style.css" />
+    <script src="m/jquery.js"></script> 
+    <script src="m/cart.js"></script>
+    <script src="m/adminJS.js"></script>
 </head>
 
 <body>
@@ -30,8 +33,10 @@ include('config.php');
             <a href="index.php">Читать текст</a><span> | </span> 
             <a href="index.php?c=page&act=edit">Редактировать текст</a>
         </div>
-        <div class="menu1"><a href="<?=$userlink['link']?>">
-                <?=$userlink[linktext]?></a></div>
+        <div class="menu1">
+            <a href="<?=$userlink['link'][0]?>"><?=$userlink[linktext][0]?></a>
+            <a href="<?=$userlink['link'][1]?>"><?=$userlink[linktext][1]?></a>
+        </div>
     </div>
 
     <div id="content">
@@ -43,7 +48,7 @@ include('config.php');
     </div>
 
     <div id="footer">
-        Все права защищены. Адрес. Телефон. ||| Логин:Some. Пароль:SomeSome 
+        Все права защищены. Адрес. Телефон.
     </div>
 </body>
 

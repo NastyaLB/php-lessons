@@ -6,7 +6,7 @@
  */
 ?>
 
-<p>Wellcome, <?=$_SESSION[username]?>!</p>
+<p>Wellcome, <?=$_SESSION[userlogin]?>!</p>
 <form method="post">
 <input type="text" name="username" placeholder="username"><br/>
 <input type="password" name="password"><br/>
