@@ -10,13 +10,13 @@ class C_User extends C_Base
 	// Конструктор.
 	//
 	
-	public function action_cabinet(){	
+	public function action_cabinet($connect){	
 		$this->title .= '::Личный кабинет';          
 		$text = $this->userlink[form];
 		
 		if($this->isPost())
 		{
-            $_SESSION[username]=null;
+            $_SESSION[userlogin]=null;
             $_SESSION[password]=null;
             $_SESSION[usArr]=null;
             $_SESSION[buyItem]=null;
@@ -29,17 +29,19 @@ class C_User extends C_Base
 	
 	
 	public function action_login($connect){
-		$this->title .= '::Вход в личный кабинет';
+		$this->title .= '::Вход в личный кабинет';         
+		$text = $this->userlink[form];
         
         if($this->isPost())
 		{
-            if(!isset($_SESSION[username])&&isset($_POST[username])) {
+            if(!isset($_SESSION[userlogin])&&isset($_POST[userlogin])) {
                 checkPass($connect);
-            }
-			header('location: index.php');
+                checkOrdrs($connect);
+            } 
+			header('location: index.php?u=page&act=cabinet'); //?u=page&act=cabinet
 			exit();
 		}
         
-		$this->content = $this->Template('v/v_login.php');
+		$this->content = $this->Template('v/v_login.php', array('text' => $text));
 	}
 } 

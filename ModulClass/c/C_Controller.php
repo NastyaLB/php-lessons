@@ -3,7 +3,8 @@
 // Базовый класс контроллера.
 //
 abstract class C_Controller
-{
+{   
+
     // Генерация внешнего шаблона
 	protected abstract function render();
 	
